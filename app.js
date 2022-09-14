@@ -20,16 +20,19 @@ function calculateProfitAndLoss(initial, quantity, current){
             var lossPercentage = (loss / initial) * 100;
             var message = `The loss is ${loss} and loss prcentage is ${lossPercentage}%`;
             showOutput(message);
+            bodyColor.style.backgroundColor = "#be123c";
         }
         else if(current > initial){
             var profit = (current - initial) * quantity;
             var profitPercentage = (profit / initial) * 100;
             var message = `The profit is ${profit} and profit prcentage is ${profitPercentage}%`;
             showOutput(message);
+            bodyColor.style.backgroundColor = "#047857";
         }
         else{
             var message = `No pain no gain, no gain no pain`;
             showOutput(message);
+            bodyColor.style.backgroundColor = "#0e7490";
         }
     }
     else{
