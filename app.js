@@ -18,18 +18,23 @@ function calculateProfitAndLoss(initial, quantity, current){
         if(initial > current){
             var loss = (initial - current) * quantity;
             var lossPercentage = loss / quantity * 100;
-            var message = "The loss is ${loss} and loss prcentage is ${lossPercentage}";
+            var message = `The loss is ${loss} and loss prcentage is ${lossPercentage}%`;
             showOutput(message);
         }
         else if(current > initial){
             var profit = (current - initial) * quantity;
             var profitPercentage = profit / quantity * 100;
-            var message = "The profit is ${profit} and profit prcentage is ${profitPercentage}";
+            var message = `The profit is ${profit} and profit prcentage is ${profitPercentage}%`;
             showOutput(message);
         }
         else{
-            var message = "No pain no gain, no gain no pain";
+            var message = `No pain no gain, no gain no pain`;
+            showOutput(message);
         }
+    }
+    else{
+        var message = "Please enter values in all fields";
+        showOutput(message);
     }
 }
 
