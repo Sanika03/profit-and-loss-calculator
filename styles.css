@@ -47,6 +47,11 @@ input{
     font-family: 'Raleway', sans-serif;
 }
 
+#check-btn:hover{
+    background-color: var(--secondary-color);
+    color: black;
+}
+
 #output-div {
     margin-top: 2%;
     font-size: x-large;
