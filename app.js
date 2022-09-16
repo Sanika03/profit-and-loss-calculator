@@ -17,14 +17,14 @@ function calculateProfitAndLoss(initial, quantity, current){
     if(initial != "" && quantity != "" && current != ""){
         if(initial > current){
             var loss = (initial - current) * quantity;
-            var lossPercentage = (loss / initial) * 100;
+            var lossPercentage = (loss / (initial * quantity)) * 100;
             var message = `The loss is ${loss.toFixed(2)} and loss prcentage is ${lossPercentage.toFixed(2)}%`;
             showOutput(message);
             bodyColor.style.backgroundColor = "#be123c";
         }
         else if(current > initial){
             var profit = (current - initial) * quantity;
-            var profitPercentage = (profit / initial) * 100;
+            var profitPercentage = (profit / (initial * quantity)) * 100;
             var message = `The profit is ${profit.toFixed(2)} and profit prcentage is ${profitPercentage.toFixed(2)}%`;
             showOutput(message);
             bodyColor.style.backgroundColor = "#047857";
